@@ -1,0 +1,5 @@
+library(dplyr)
+data = read.csv('/home/wangmk/UM/Research/SURE/cleaned_data/full_cleaned_data.csv')
+data = tbl_df(data)
+normal = data %>% filter(RMS<=50)
+abnormal = data %>% filter(RMS>50)
